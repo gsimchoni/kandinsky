@@ -111,7 +111,7 @@ drawWave <- function(i, rv) {
 
 drawCrissCross <- function(i, rv) {
   vp3 <- viewport(x = nex(rv), y = nex(rv), width = nex(rv), height = nex(rv), clip = "off")
-  gCrissCross2(vp = vp3, rv = rv,
+  gCrissCross(vp = vp3, rv = rv,
                gp = gpar(lwd = nex(rv) * 10,
                          col = rgb(nex(rv),
                                    nex(rv),

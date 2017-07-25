@@ -30,6 +30,7 @@
 kandinsky <- function(df = NULL, rv = runif(1000)) {
   
   library(grid)
+  library(purrr)
   
   if (!is.null(df)) {
     rv <- normalizeAndVectorize(df)

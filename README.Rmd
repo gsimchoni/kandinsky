@@ -1,0 +1,33 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+Install:
+```{r, eval = FALSE}
+devtools::install_github("gsimchoni/kandinsky")
+```
+
+Load:
+```{r}
+library(kandinsky)
+```
+
+Generate a random Kandinsky painting:
+```{r}
+kandinsky()
+```
+
+Generate a Kandinsky Painting from the `iris` dataset:
+```{r}
+kandinsky(mtcars)
+```
