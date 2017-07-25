@@ -1,0 +1,15 @@
+Package: kandinsky
+Title: Turn any dataset into a Kandinsky painting
+Version: 0.0.0.9000
+Date: 2017-06-15
+Authors@R: person("Giora", "Simchoni", email = "gsimchoni@gmail.com", role = c("aut", "cre"))
+Description: This package has a single function to turn any numeric vector in the range 0 to 1,
+	or a given dataset, into a Kandinsky-like painting, with a few common Kandinsky shapes,
+	e.g. rectangles and circles, drawn with wrappers around the \code{grid} package.
+URL: http://github.com/gsimchoni/kandinsky, http://giorasimchoni.com
+Depends: R (>= 3.3.3)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+Imports: grid, purrr, tibble
