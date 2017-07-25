@@ -20,7 +20,7 @@ kandinsky()
 
 ![](README-unnamed-chunk-4-1.png)
 
-Generate a Kandinsky Painting from the `iris` dataset:
+Generate a Kandinsky Painting from the `mtcars` dataset:
 
 ``` r
 kandinsky(mtcars)

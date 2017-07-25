@@ -27,7 +27,7 @@ Generate a random Kandinsky painting:
 kandinsky()
 ```
 
-Generate a Kandinsky Painting from the `iris` dataset:
+Generate a Kandinsky Painting from the `mtcars` dataset:
 ```{r}
 kandinsky(mtcars)
 ```
