@@ -27,3 +27,5 @@ kandinsky(mtcars)
 ```
 
 ![](README-unnamed-chunk-5-1.png)
+
+More information [here](http://giorasimchoni.com/2017/07/30/2017-07-30-data-paintings-the-kandinsky-package/).
