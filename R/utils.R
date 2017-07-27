@@ -79,7 +79,15 @@ drawTriangle <- function(i, rv) {
 }
 
 drawArch <- function(i, rv) {
-  grid.curve(nex(rv), nex(rv), nex(rv), nex(rv),
+  x1 <- nex(rv)
+  y1 <- nex(rv)
+  x2 <- nex(rv)
+  y2 <- nex(rv)
+  if (all(x1 == y1, y1 == x2, x2 == y2)) {
+    x1 <- min(x1 + 0.1, 1)
+    y1 <- max(y1 - 0.1, 0)
+  }
+  grid.curve(x1, y1, x2, y2,
              curvature = nex(rv) * 2 + (-1), square = FALSE, ncp = floor(nex(rv) * 100),
              gp = gpar(lwd = nex(rv) * 10,
                        col = rgb(nex(rv),
@@ -123,7 +131,9 @@ zeroOneNormalize <- function(x) {
   if (!is.numeric(x)) {
     if (is.factor(x)) {
       x <- as.numeric(unclass(x))
-    } else {
+    } else  if (is.list(x)) {
+      x <- sapply(x, function(y) ifelse(length(y) > 0, length(y), NA))
+    } else{
       x <- as.numeric(unclass(as.factor(x)))
     }
   }
