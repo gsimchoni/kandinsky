@@ -38,13 +38,22 @@ gCrissCross <- function(n = 5, rv, gp = gpar(), vp = NULL, ...) {
   }
 }
 
-nex <- function(rv) {
-  if (i == length(rv)) {
-    i <<- 0
+#' Get Next Value in a Vector
+#'
+#' Use a little environment magic to create a global counter
+#'   which is invisible but accessible because it is in its
+#'   own environment.  Based on:
+#'   https://stackoverflow.com/a/25902379/633251
+#'   
+nex <- local(({
+  i <- 0L
+  function(v) {
+    if (i == length(v)) i <<- 0L
+    i <<- i + 1L
+    return(v[i])
   }
-  i <<- i + 1
-  rv[i]
-}
+}))
+
 
 drawRectangle <- function(i, rv) {
   grid.rect(x = nex(rv), y = nex(rv), width = nex(rv), height = nex(rv),
