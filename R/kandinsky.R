@@ -38,8 +38,6 @@ kandinsky <- function(df = NULL, rv = runif(1000)) {
   
   grid.newpage()
   
-  i <<- 0
-  
   grid.rect(gp=gpar(fill=rgb(nex(rv),
                              nex(rv),
                              nex(rv),
@@ -60,4 +58,6 @@ kandinsky <- function(df = NULL, rv = runif(1000)) {
   walk(1:nTiltedRectangles, drawTiltedRectangle, rv)
   walk(1:nWaves, drawWave, rv)
   walk(1:nCrissCross, drawCrissCross, rv)
+  
+  environment(nex)$i <- 0 # resets the counter created by function nex
 }
